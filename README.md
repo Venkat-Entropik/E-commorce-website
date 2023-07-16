@@ -1,5 +1,5 @@
 E-Commerce Website
-
+-------------------------------------------
 Introduction :
   Welcome to our E-commerce website! This document serves as a guide on how to use and navigate through our website effectively. Whether you are a customer or a developer, this README file will provide you with the necessary information to get started.
 
