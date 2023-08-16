@@ -83,6 +83,14 @@ img {
   align-items: center;
   height: 100%;
 }
+.flex1{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.flex1 .price{
+  font-size: 2rem;
+}
 
 .grid {
   display: grid;
@@ -535,5 +543,8 @@ img {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+  }
+  .flex1{
+    margin-top: 10px;
   }
 }

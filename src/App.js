@@ -5,7 +5,6 @@ import { Products } from "./pages/products"
 import { Product } from "./pages/product"
 import { Cart } from "./pages/cart"
 import { NotFound } from "./pages/not-found"
-
 import { useCart } from './context/cart'
 import Allert from "./components/alert/Allert"
 

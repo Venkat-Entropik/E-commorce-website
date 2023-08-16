@@ -3,7 +3,8 @@ import { useEffect, useState } from "react"
 import { FakeStoreApi } from '../../services/fake-store-api'
 import { Link, useParams } from "react-router-dom"
 import { useCart } from "../../context/cart"
-
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 const Product = () => {
     const [loading, setLoading] = useState(true);
     const [product, setProduct] = useState();
@@ -36,24 +37,47 @@ const Product = () => {
             </div>
         )
     }
-
+    console.log(product?.images)
 
     return (
         <div className="container">
             {loading ? (
                 <div className={"loader"}></div>
             ) : (
-                <div className="product py-2">
-                    <div className="details grid p-3">
-                        <div className="product-image">
-                            <img src={product.thumbnail} alt="" />
-                        </div>
-                        <div className="info">
-                            <div className="description">
-                                <h3>{product.title}</h3>
-                                <p className=" my-2">{product.description}</p>
+              <div className='parentContainer'>
+                <div className='singleLeftContainer'>
+                <Carousel className='car'
+                
+            showThumbs={false}
+            autoPlay={true}
+            transitionTime={1}
+            infiniteLoop={true}
+            showStatus={false}
+                >
+                        {
+                        
+                        product?.images?.map((item, index) => (
+                            <div key={index} className='carousel'>
+                                <img src={item} alt={`Product ${index}`} />
                             </div>
-                            <div className="flex">
+                        ))}
+                </Carousel>
+                </div>
+                <div className='singleRightContainer'>
+                        <div>
+                            <h3 className='ProdTitle'>{product.title}</h3>
+                        </div>
+                        <div className='rating'>
+                            {
+                                [...new Array(5)].map((item,index)=>{
+                                    return (<span className={index+1 <= Math.floor(product.rating) ? 'rate selected' : 'rate'}></span>)
+                                })
+                            }
+                        </div>
+                        <div>
+                            <p className='singleDescription'>{product.description}</p>
+                        </div>
+                        <div className="flex1">
                                 <span className="price">${product.price}</span>
                                 <span className="cart" onClick={() => {
                                     //  user ? addToCart(product) : handleOpen()
@@ -71,10 +95,10 @@ const Product = () => {
                                 }}>
                                     <img src="https://cdn-icons-png.flaticon.com/512/126/126083.png" alt="logo" />
                                 </span>
-                            </div>
                         </div>
-                    </div>
+                     
                 </div>
+              </div>
             )}
         </div>
     )
