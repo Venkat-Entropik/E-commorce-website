@@ -20,6 +20,7 @@ const useCart = () => useContext(CartContext)
 const CartProvider = ({ children }) => {
     const [cart, setCart] = useState(initialState.cart)
     const [open, setOpen] = React.useState(false);
+    const [value, setValue] = React.useState("");
     const[user,setUser]=useState(null)
     const[alert,setAlert]=useState({
         open:false,
@@ -72,7 +73,7 @@ const handleClose = () => setOpen(false);
 
     return (
         <CartContext.Provider
-            value={{ cart, cartItemCount, addToCart, removeFromCart, increaseQuantity, decreaseQuantity,alert,setAlert,user,handleOpen,handleClose,open }}
+            value={{ cart, cartItemCount, addToCart, removeFromCart, increaseQuantity, decreaseQuantity,alert,setAlert,user,handleOpen,handleClose,open,value, setValue }}
         >
             {children}
         </CartContext.Provider>

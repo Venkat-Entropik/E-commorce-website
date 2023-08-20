@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,200;0,400;1,600&display=swap");
-
+.App{
+  width: 100vw;
+  height: 100vh;
+}
 :root {
   --blue: #007fff;
 }
@@ -25,8 +28,22 @@ img {
   height: 100%;
 }
 
+
 .link {
   text-decoration: none;
+}
+
+.categories-scrollable {
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+  overflow-x: auto;
+  white-space: nowrap; 
+}
+.navlogo{
+  height: 3.5rem;
+  height: 3rem;
+  border-radius: 50%;
 }
 
 .price {
@@ -41,6 +58,7 @@ img {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 40px;
+  
 }
 
 .card {
@@ -51,7 +69,9 @@ img {
   /* margin: 20px; */
   box-shadow: rgb(189, 189, 192) 0px 15px 15px -5px;
   border-radius: 20px;
-  background-color: #fff;
+
+  background: linear-gradient(to bottom, rgba(240, 178, 122, 0.6), rgba(245, 203, 167, 0.6));
+
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
@@ -263,6 +283,7 @@ img {
   background-color: #007fff;
   color: #fff;
   text-align: center;
+  
 }
 
 .wrapper .grid {
@@ -404,8 +425,8 @@ input[type="text"] {
 	justify-content: space-around;
 	flex-wrap: wrap;
 } */
-/* 
-.card .grid {
+
+/* .card .grid {
 	grid-template-columns: 1fr;
 	gap: 30px;
 	grid-auto-rows: 150px 50px 30px;
@@ -456,6 +477,14 @@ img {
 .price {
   color: #007fff;
   font-weight: 600;
+  
+}
+.productRate{
+  color: white;
+  font-weight: 500;
+  background-color: rgb(56,142,60);
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .cart {

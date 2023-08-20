@@ -6,14 +6,15 @@ import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import GoogleButton from 'react-google-button'
 
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import { AppBar } from '@mui/material';
+
+
+import { AppBar, Tab, Tabs } from '@mui/material';
 import Login from './Login';
 import Signup from './Signup';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useCart } from '../context/cart';
+
 
 
 

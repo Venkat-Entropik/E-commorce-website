@@ -1,0 +1,88 @@
+.carouselDisp{
+    width: 100%;
+    height: 40%;
+    padding: 25px;
+    margin: 25px auto;
+}
+.car {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: rgb(206, 239, 237);
+  }
+  
+  .imageSlider {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .carouselContent {
+    padding-right: 20px;
+  }
+  
+  .carouselContent h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .carouselContent h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: rgb(9, 78, 80);
+  }
+  
+  .carouselContent h4 {
+    font-size: 16px;
+    color: #e74c3c;
+    margin-bottom: 8px;
+    
+  }
+  .carouselContent h4 .after{
+    font-size: 1.5rem;
+  }
+  .carouselContent h4 .before{
+    color: red;
+    text-decoration: line-through;
+  }
+  
+  .carouselContent p {
+    font-size: 14px;
+    color: #333;
+
+   
+  }
+  .carouselContent p span{
+    background-color: gold;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    color: green;
+  }
+  .carouselImage img {
+    max-width: 100%;
+    height: auto;
+    max-height: 180px;
+  }
+  
+
+  @media (max-width: 600px) {
+    .carouselDisp{
+        height: 60%;
+    }
+    .imageSlider {
+      flex-direction: column;
+    }
+  
+    .carouselContent {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .carouselImage {
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,14 @@
+.after1{
+    font-size: 1.2rem;
+}
+.before1{
+    color: rgb(128, 195, 218);
+    text-decoration: line-through;
+}
+.disc span{
+    margin: 3px;
+}
+.discount{
+    color: green;
+    font-size: 14px;
+}

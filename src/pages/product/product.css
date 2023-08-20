@@ -33,8 +33,8 @@
 
 .card .grid {
     grid-template-columns: 1fr;
-    gap: 30px;
-    grid-template-rows: 200px 50px 30px;
+    gap: 10px;
+    grid-template-rows: 200px 50px 30px 50px;
     text-overflow: ellipsis;
 }
 
@@ -43,8 +43,8 @@
 }
 .parentContainer{
     width: 100%;
-    height: 80vh;
-    box-shadow: 0px 0px 3px black;
+    height: 90vh;
+    /* box-shadow: 0px 0px 3px black; */
     border-radius: 10px;
     margin-top: 25px;
     padding: 15px;
@@ -55,9 +55,7 @@
 .singleLeftContainer{
     width: 40%;
     height: 60%;
-    box-shadow: 0px 0px 3px black;
     border-radius: 10px;
-   
     padding: 10px;
 }
 .singleRightContainer{
@@ -86,6 +84,47 @@
     font-size: 1.2rem;
 
 }
+.colorContainer{
+    display: flex;
+}
+
+.prodColor{
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: blue;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.prodColor1{ margin: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.prodColor2{ margin: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.prodColor3{ margin: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.rating{
+    margin-top: 10px;
+}
 .rate::before{
     content: "\2606";
     font-size: 1.7rem;
@@ -95,12 +134,18 @@
 .rate.selected::before{
     content: "\2605";
     font-size: 1.7rem;
-    color: darkgreen;
+    color: gold;
 }
 .singleDescription{
     font-size: 1.1rem;
     color: blueviolet;
     margin-top: 10px;
+}
+.ratingSingle{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: green;
+    margin-left: 10px;
 }
 @media only screen and (max-width:660px){
     .parentContainer{
@@ -127,7 +172,7 @@
 
     .card .grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 10px;
         text-overflow: ellipsis;
     }
 }
@@ -145,3 +190,9 @@
         gap: 30px;
     }
 }
+
+
+
+/* ---------- */
+
+

@@ -73,12 +73,22 @@ const Product = () => {
                                     return (<span className={index+1 <= Math.floor(product.rating) ? 'rate selected' : 'rate'}></span>)
                                 })
                             }
+                            <span className='ratingSingle'>({Math.floor(product.rating)})</span>
                         </div>
                         <div>
                             <p className='singleDescription'>{product.description}</p>
                         </div>
+                        <span style={{color:'green'}}>SELECT COLORS</span>
+                        <div className='colorContainer'>
+                            <div className='prodColor1'></div>
+                            <div className='prodColor2'></div>
+                            <div className='prodColor3'></div>
+                            <div className='prodColor'></div>
+                        </div>
                         <div className="flex1">
-                                <span className="price">${product.price}</span>
+                                <h4 className="disc"><span className="price">${product.price}</span> <span className='before1'>${Math.round((product.price/100)*product.discountPercentage)+product.price}</span><span className="discount">{Math.round(product.discountPercentage)}% off</span></h4>
+                                
+                               
                                 <span className="cart" onClick={() => {
                                     //  user ? addToCart(product) : handleOpen()
 

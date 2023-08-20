@@ -15,6 +15,9 @@ const Cart = () => {
         return Number(Math.round(value + "e" + decimals) + "e-" + decimals)
     }
 
+    const handlePlaceOrder=()=>{
+        
+    }
     return (
         <div className="cartWrapper">
             <div className="container">
@@ -86,6 +89,9 @@ const Cart = () => {
                                 <div className=" flex py-1">
                                     <span>Total:</span>
                                     <span className="price">${round(cartTotal() + SHIPPING_CHARGES, 2)}</span>
+                                </div>
+                                <div className="orderBut">
+                                    <button className="remove my-1" style={{outline:'none',border:'none'}} onClick={handlePlaceOrder}>Place Order</button>
                                 </div>
                             </div>
                         </div>

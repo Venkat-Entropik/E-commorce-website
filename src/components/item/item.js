@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-
+import './item.css'
 const Item = ({ data, addToCart }) => {
 
-    const { id, thumbnail, title, price } = data
+    const { id, thumbnail, title, price,discountPercentage,rating } = data
 
     return (
         <div className="card">
@@ -15,9 +15,12 @@ const Item = ({ data, addToCart }) => {
                         {title}
                     </Link>
                 </div>
+                
+                <h4 className="disc">$<span className='after1'>{price}</span> <span className='before1'>${Math.round((price/100)*discountPercentage)+price}</span><span className="discount">{Math.round(discountPercentage)}% off</span></h4>
+                
                 <div className="flex">
-                    <span className="price" style={{ marginRight: 15 }}>
-                        ${price}
+                    <span className="productRate" style={{ marginRight: 15 }}>
+                        {rating} &#9733;
                     </span>
                     <div className="cart" onClick={addToCart}>
                         <img className="cartImg" src="https://cdn-icons-png.flaticon.com/512/126/126083.png" alt="logo" />

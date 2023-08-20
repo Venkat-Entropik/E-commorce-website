@@ -3,7 +3,6 @@ import { useState } from "react"
 import AuthModel from "../../Authentication/AuthModel";
 import { useCart } from "../../context/cart";
 import UserSidebar from "../../Authentication/UserSidebar";
-
 const NavBar = ({ onSearch, cartItemCount }) => {
 
     const [searchQuery, setSearchQuery] = useState('');
@@ -21,7 +20,7 @@ const NavBar = ({ onSearch, cartItemCount }) => {
                 <div className="header py-2">
                     <div className="grid1">
                         <Link to="/" className="link">
-                            <h2 className="brand">Fake Store</h2>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4pPOpRppEn7NigwrvpOTDzR3vSpKGtRPyXg&usqp=CAU" alt='logo' className="navlogo"/>
                         </Link>
                         <div className="formContainer">
                             <form className="search">

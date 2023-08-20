@@ -1,0 +1,17 @@
+
+.feed{
+    width: 100%;
+    height: 20%;
+    margin-top: 25px;
+}
+.feedback-slide {
+    background-color: rgb(37,105,63);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    color: white;
+  }

@@ -11,7 +11,7 @@ const Products = () => {
     const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState([]);
     const [query] = useSearchParams();
-    const { user,addToCart,handleOpen,setAlert } = useCart()
+    const { value,user,addToCart,handleOpen,setAlert } = useCart()
     const[pages,setPages]=useState(1)
     const searchQuery = query.get('q');
 
@@ -25,6 +25,11 @@ const Products = () => {
         }
         fetchProducts().catch(console.error)
     }, [searchQuery])
+
+
+    const filterData=products.filter((item)=>{
+        return value ? item.category===value : item
+    })
 
     if (!loading && searchQuery && !products.length) {
         return (
@@ -44,7 +49,7 @@ const Products = () => {
                         {loading ? (
                             <div className="loader" />
                         ) : (
-                            products.slice(pages*10-10,pages*10+10).map((product) => (
+                            filterData.slice(pages*10-10,pages*10+10).map((product) => (
                                 <Item key={product.id} data={product} addToCart={() => {
                                     // user ? addToCart(product) : handleOpen()
                                     if(user){
@@ -63,7 +68,7 @@ const Products = () => {
                     </div>
                 </div>
                 <div className="divContainer">
-                <Pagination className="pageCenter" count={products.length/10} color="primary" onChange={(e,p)=>{
+                <Pagination className="pageCenter" count={filterData.length/10} color="primary" onChange={(e,p)=>{
                     setPages(p);
                     
                 }}/>
