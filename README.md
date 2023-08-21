@@ -27,11 +27,18 @@ Overview :
 
 When ever we open this Link it will redirect to the Home page and here it will show all the card that contains product image and price and add to card option
 
-![1](https://github.com/venky123895/E-commorce-website/assets/114353712/6640f814-323e-4154-94f8-d5dbc900387d)
+![1](https://github.com/venky123895/E-commorce-website/assets/114353712/79ada46b-f7e1-4bc2-be22-11826d691a37)
+
+
+![2](https://github.com/venky123895/E-commorce-website/assets/114353712/bbc6fc36-d0df-49a5-bb3a-8b23e6ad5b73)
+
 
 When we click on the card it will show the details of that project
 
-![2](https://github.com/venky123895/E-commorce-website/assets/114353712/f39908ca-b12d-4a5a-a32b-6ea0ae62bd76)
+![3](https://github.com/venky123895/E-commorce-website/assets/114353712/453dac96-cf63-43f8-85c1-14ddc3ed9e96)
+
+![4](https://github.com/venky123895/E-commorce-website/assets/114353712/833deb89-fedc-468c-84b4-e0a6fa11c4bd)
+
 
 User can search the partcular product using search bar
 
@@ -44,7 +51,8 @@ If user want to add the product to cart he/she must login then only he can add t
 
 In the Cart Section It will show all the products added to the cart and quatity of the products which we can increase later and total cost
 
-![5](https://github.com/venky123895/E-commorce-website/assets/114353712/f0fd144a-1a5b-49d9-8d5d-10183f5df776)
+
+![5](https://github.com/venky123895/E-commorce-website/assets/114353712/a8360fff-ca60-4812-8c32-d3df53c19e73)
 
 
 At the end If we want to logout means onclicking on the profile it will show the logout button with that we can logout
